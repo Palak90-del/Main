@@ -4,58 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neon Cinematic Experience</title>
-
-    <!-- Tailwind CSS CDN load -->
-    <!-- MUST load first to define the global 'tailwind' object -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- 1. CUSTOM TAILWIND CONFIGURATION SCRIPT -->
-    <!-- This now runs AFTER the Tailwind CDN script loads -->
 <script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    'neon-50': '#f7f3ff',
-                    'neon-100': '#efe7ff',
-                    'neon-300': '#caa8ff',
-                    'neon-500': '#a855f7',
-                    'neon-700': '#7a1cf0',
-                    'cobalt-500': '#3b82f6',
-                    'cobalt-700': '#1e40af',
-                    'bg': '#07070a'
-                },
-                keyframes: {
-                    fadeUp: {
-                        '0%': { opacity: '0', transform: 'translateY(10px)' },
-                        '100%': { opacity: '1', transform: 'translateY(0)' }
-                    },
-                    subtlePulse: {
-                        '0%, 100%': { transform: 'scale(1)' },
-                        '50%': { transform: 'scale(1.02)' }
-                    }
-                },
-                animation: {
-                    fadeUp: 'fadeUp 600ms ease-out forwards',
-                    subtlePulse: 'subtlePulse 3s infinite ease-in-out'
-                }
+  window.tailwind = {
+    config: {
+      theme: {
+        extend: {
+          colors: {
+            'neon-50': '#f7f3ff',
+            'neon-100': '#efe7ff',
+            'neon-300': '#caa8ff',
+            'neon-500': '#a855f7',
+            'neon-700': '#7a1cf0',
+            'cobalt-500': '#3b82f6',
+            'cobalt-700': '#1e40af',
+            'bg': '#07070a'
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            subtlePulse: {
+              '0%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.02)' },
+              '100%': { transform: 'scale(1)' }
             }
-        },
-
-        // ⭐ SAFELIST — FORCES THESE CLASSES TO BE GENERATED
-        safelist: [
-            'bg-neon-50','bg-neon-100','bg-neon-300','bg-neon-500','bg-neon-700',
-            'text-neon-50','text-neon-100','text-neon-300','text-neon-500','text-neon-700',
-            'border-neon-50','border-neon-100','border-neon-300','border-neon-500','border-neon-700',
-
-            'bg-cobalt-500','bg-cobalt-700',
-            'text-cobalt-500','text-cobalt-700',
-            'border-cobalt-500','border-cobalt-700',
-
-            'bg-bg','text-bg'
-        ]
+          },
+          animation: {
+            fadeUp: "fadeUp 600ms ease-out forwards",
+            subtlePulse: "subtlePulse 3s infinite ease-in-out"
+          }
+        }
+      },
+      safelist: [
+        'bg-neon-50','bg-neon-100','bg-neon-300','bg-neon-500','bg-neon-700',
+        'text-neon-50','text-neon-100','text-neon-300','text-neon-500','text-neon-700',
+        'border-neon-300','border-neon-500','border-neon-700',
+        'bg-cobalt-500','bg-cobalt-700',
+        'text-cobalt-500','text-cobalt-700',
+        'border-cobalt-500','border-cobalt-700',
+        'bg-bg','text-bg'
+      ]
     }
+  }
 </script>
+
+<script src="https://cdn.tailwindcss.com"></script>
 
     
     <!-- Font Awesome for icons -->
@@ -413,4 +407,5 @@
         });
     </script>
 </body>
+
 </html>
